@@ -1,0 +1,28 @@
+{
+    "exp_path": "experiment1",
+    "log": {
+        "directory": "./logs",
+        "ckpt_iter": "max"
+    },
+    "optimization": {
+        "batch_size_per_gpu": 4,    
+        "learning_rate": 0.001,
+        "max_epoch": 50
+    },
+    "network_config": {
+        "seq_len": 1323000,
+        "patch_size": 147,
+        "embed_dim": 64,
+        "num_heads": 8,
+        "ffn_dim": 256,
+        "num_layers": 4
+    },
+    "trainset_config": {
+        "root": "./dns/",
+        "sample_rate": 44100
+    },
+    "dist_config": {
+        "dist_backend": "nccl",
+        "dist_url": "tcp://localhost:54321"
+    }
+}
